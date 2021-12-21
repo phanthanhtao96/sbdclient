@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBD Portal</title>
+    <meta property="og:title" content="SBD Portal">
+    <meta property="og:site_name" content="SBDPortal">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+    <link rel="icon" type="image/png" href="images/logo-color.svg">
+    <link rel="stylesheet" href="fonts/GoogleSans/stylesheet.css">
+    <link rel="stylesheet" href="fonts/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/Linearicons/style.css">
+    <link rel="stylesheet" href="frontend/css/bootstrap_customized.css">
+    <link rel="stylesheet" href="frontend/css/select2.min.css">
+    <link rel="stylesheet" href="frontend/css/animate.css">
+    <link rel="stylesheet" href="frontend/js/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="frontend/js/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="frontend/css/global.css">
+    <link rel="stylesheet" href="frontend/user/user.css">
+    <link rel="stylesheet" href="frontend/css/responsive.css">
+</head>
+<body class="user-page" id="add-service">
+    <style>
+        @keyframes fadeout {
+            0% { opacity: 1; }
+            50% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        @-webkit-keyframes fadeout {
+            0% { opacity: 1; }
+            50% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        @-moz-keyframes fadeout {
+            0% { opacity: 1; }
+            50% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+    <div id="hide_me" style="opacity: 0;background-color: #fff; position: absolute; width: 100%; height: 100%;z-index: 9999; pointer-events: none;top: 0;left: 0;-webkit-animation: fadeout .5s ease-in alternate; -moz-animation: fadeout .5s ease-in alternate; animation:fadeout .5s ease-in alternate;"></div>
+    <header class="header-admin">
+        <div class="inner d-flex align-center">
+            <div class="logo">
+                <img src="images/logo-color.svg" alt="SBD Portal">
+            </div>
+            <nav class="nav-dashboard">
+                <ul class="list-unstyled d-flex align-center">
+                    <li><a href="dashboard.html" title="Dashboard"><img src="images/header/Home.svg" alt="Dashboard"></a></li>
+                    <li><a href="#" title="Dashboard"><img src="images/header/Buy.svg" alt="Dashboard"></a></li>
+                    <li><a href="#" title="Dashboard"><img src="images/header/Unlocked.svg" alt="Dashboard"></a></li>
+                </ul>
+            </nav>
+            <nav class="nav-user">
+                <ul class="list-unstyled d-flex align-center">
+                    <li><a class="noti" href="dashboard.html" title="Notification"><img src="images/header/Notification.svg" alt="Notification"><span class="alert"></span></a></li>
+                    <li><a class="chat" href="#" title="Chat"><img src="images/header/Chat_1.svg" alt="Chat"><span class="alert"></span></a></li>
+                    <li class="menu-has-chilren">
+                        <a class="user-menu" href="javascript:void(0)" title="Profile"><img src="images/header/Profile.svg" alt="Profile"><span class="arrow-down"></span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="login.html" title="Đăng nhập">Đăng nhập</a>
+                            </li>
+                            <li>
+                                <a href="register.html" title="Đăng ký">Đăng ký</a>
+                            </li>
+                            <li>
+                                <a href="change-password.html" title="Đổi mật khẩu">Đổi mật khẩu</a>
+                            </li>
+                            <li>
+                                <a href="update-user.html" title="Cập nhật tài khoản">Cập nhật tài khoản</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu d-xl-none">
+                <button class="menu-toggle">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="menu-mobile-left">
+        <div class="mobile-menu d-xl-none">
+            <button class="menu-toggle">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="top">
+            <div class="coin cl-white">
+                <div class="icon">
+                    <img src="images/menu-left/coin.svg" alt="coin">
+                </div>
+                <div class="my-coin fw-900"><p>0 VNĐ</p></div>
+                <a class="charge-coin" href="#" title="Charge your coin"></a>
+            </div>
+        </div>
+        <nav class="nav-left">
+            <ul class="list-unstyled">
+                <li class="menu-item current-menu-item">
+                    <a href="dashboard.html" title="Tổng quan">
+                        <img src="images/menu-left/2.svg" alt="Tổng quan">
+                        <span class="text">Tổng quan</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="service.html" title="Dịch vụ">
+                        <img src="images/menu-left/3.svg" alt="Dịch vụ">
+                        <span class="text">Dịch vụ</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="add-service.html" title="Đăng ký dịch vụ">
+                        <img src="images/menu-left/4.svg" alt="Đăng ký dịch vụ">
+                        <span class="text">Đăng ký dịch vụ</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="order.html" title="Đơn hàng">
+                        <img src="images/menu-left/6.svg" alt="Đơn hàng">
+                        <span class="text">Đơn hàng</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="bill.html" title="Hóa đơn">
+                        <img src="images/menu-left/5.svg" alt="Hóa đơn">
+                        <span class="text">Hóa đơn</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="payment.html" title="Thanh toán">
+                        <img src="images/menu-left/7.svg" alt="Thanh toán">
+                        <span class="text">Thanh toán</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="support-ticket.html" title="Ticket hỗ trợ">
+                        <img src="images/menu-left/8.svg" alt="Ticket hỗ trợ">
+                        <span class="text">Ticket hỗ trợ</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="mailbox.html" title="Hộp thư">
+                        <img src="images/menu-left/9.svg" alt="Hộp thư">
+                        <span class="text">Hộp thư</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-content">
+        <div class="wrap-content display-flex">
+            <div class="menu-left desktop">
+                <div class="mobile-menu d-xl-none">
+                    <button class="menu-toggle">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="top">
+                    <div class="coin cl-white">
+                        <div class="icon">
+                            <img src="images/menu-left/coin.svg" alt="coin">
+                        </div>
+                        <div class="my-coin fw-900"><p>0 VNĐ</p></div>
+                        <a class="charge-coin" href="#" title="Charge your coin"></a>
+                    </div>
+                </div>
+                <nav class="nav-left">
+                    <ul class="list-unstyled">
+                        <li class="menu-item current-menu-item">
+                            <a href="dashboard.html" title="Tổng quan">
+                                <img src="images/menu-left/2.svg" alt="Tổng quan">
+                                <span class="text">Tổng quan</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="service.html" title="Dịch vụ">
+                                <img src="images/menu-left/3.svg" alt="Dịch vụ">
+                                <span class="text">Dịch vụ</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="add-service.html" title="Đăng ký dịch vụ">
+                                <img src="images/menu-left/4.svg" alt="Đăng ký dịch vụ">
+                                <span class="text">Đăng ký dịch vụ</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="order.html" title="Đơn hàng">
+                                <img src="images/menu-left/6.svg" alt="Đơn hàng">
+                                <span class="text">Đơn hàng</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="bill.html" title="Hóa đơn">
+                                <img src="images/menu-left/5.svg" alt="Hóa đơn">
+                                <span class="text">Hóa đơn</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="payment.html" title="Thanh toán">
+                                <img src="images/menu-left/7.svg" alt="Thanh toán">
+                                <span class="text">Thanh toán</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="support-ticket.html" title="Ticket hỗ trợ">
+                                <img src="images/menu-left/8.svg" alt="Ticket hỗ trợ">
+                                <span class="text">Ticket hỗ trợ</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="mailbox.html" title="Hộp thư">
+                                <img src="images/menu-left/9.svg" alt="Hộp thư">
+                                <span class="text">Hộp thư</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content-right">
+                <div class="inner">
+                    <div class="wrap-checkout">
+                        <div class="wrap-steps-checkout">
+                            <ul class="list-unstyled display-flex align-center m-bottom-0">
+                                <li class="step-active"><a href="add-service.html">Chọn sản phẩm</a></li>
+                                <li class=""><a href="cart.html">Giỏ hàng</a></li>
+                                <li class=""><a href="payment.html">Thanh toán</a></li>
+                                <li class=""><a href="complete.html">Hoàn tất</a></li>
+                            </ul>
+                        </div>
+                        <div class="wrap-add-service m-top-40 display-flex">
+                            <div class="left">
+                                <form action="" method="post" class="add-service" id="add-service_form">
+                                    <div class="group-products">
+                                        <h2 class="title cl-333 fz-18 fw-700 m-bottom-20">Nhóm sản phẩm</h2>
+                                        <div class="wrap-swiper">
+                                            <div class="inner swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <label class="item swiper-no-swiping">
+                                                            <input type="radio" name="product_cat" id="0" value="Cloud" checked>
+                                                            <div class="item-show text-center">
+                                                                <div class="img">
+                                                                    <img src="images/add-service/cloud.svg" alt="Cloud">
+                                                                </div>
+                                                                <p class="name cl-333 fw-500">Cloud</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <label class="item swiper-no-swiping">
+                                                            <input type="radio" name="product_cat" id="1" value="CDN">
+                                                            <div class="item-show text-center">
+                                                                <div class="img">
+                                                                    <img src="images/add-service/CDN.svg" alt="CDN">
+                                                                </div>
+                                                                <p class="name cl-333 fw-500">CDN</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <label class="item swiper-no-swiping">
+                                                            <input type="radio" name="product_cat" id="2" value="Smart Corporation">
+                                                            <div class="item-show text-center">
+                                                                <div class="img">
+                                                                    <img src="images/add-service/Smart_Corporation.svg" alt="Smart Corporation">
+                                                                </div>
+                                                                <p class="name cl-333 fw-500">Smart Corporation</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <label class="item swiper-no-swiping">
+                                                            <input type="radio" name="product_cat" id="3" value="AWS Lightsail">
+                                                            <div class="item-show text-center">
+                                                                <div class="img">
+                                                                    <img src="images/add-service/AWS_Lightsail.svg" alt="AWS Lightsail">
+                                                                </div>
+                                                                <p class="name cl-333 fw-500">AWS Lightsail</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <label class="item swiper-no-swiping">
+                                                            <input type="radio" name="product_cat" id="4" value="Tài khoản">
+                                                            <div class="item-show text-center">
+                                                                <div class="img">
+                                                                    <img src="images/add-service/account.svg" alt="Tài khoản">
+                                                                </div>
+                                                                <p class="name cl-333 fw-500">Tài khoản</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <label class="item swiper-no-swiping">
+                                                            <input type="radio" name="product_cat" id="4" value="WorkIT">
+                                                            <div class="item-show text-center">
+                                                                <div class="img">
+                                                                    <img src="images/add-service/WorkIT.svg" alt="WorkIT">
+                                                                </div>
+                                                                <p class="name cl-333 fw-500">WorkIT</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
+                                        </div>
+                                    </div>
+                                    <div class="group-product-options m-top-20" id="product-options">
+                                        <div class="list-products">
+                                            <div class="inner swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <label class="item swiper-no-swiping">
+                                                            <input type="radio" name="product" id="0" value="Public Cloud" checked>
+                                                            <div class="item-show text-center">
+                                                                <div class="img">
+                                                                    <img src="images/add-service/Publid_Cloud.svg" alt="Public Cloud">
+                                                                </div>
+                                                                <p class="name fz-14 cl-333">Public Cloud</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <label class="item swiper-no-swiping">
+                                                            <input type="radio" name="product" id="0" value="SBD Cloud for Workpress">
+                                                            <div class="item-show text-center">
+                                                                <div class="img">
+                                                                    <img src="images/add-service/SBDCloudforWorkpress.svg" alt="SBD Cloud for Workpress">
+                                                                </div>
+                                                                <p class="name fz-14 cl-333">SBD Cloud for Workpress</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <label class="item swiper-no-swiping">
+                                                            <input type="radio" name="product" id="0" value="SBD Cloud for Database">
+                                                            <div class="item-show text-center">
+                                                                <div class="img">
+                                                                    <img src="images/add-service/SBDCloudforDatabase.svg" alt="SBD Cloud for Database">
+                                                                </div>
+                                                                <p class="name fz-14 cl-333">SBD Cloud for Database</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <label class="item swiper-no-swiping">
+                                                            <input type="radio" name="product" id="0" value="SBD Cloud for Prupal">
+                                                            <div class="item-show text-center">
+                                                                <div class="img">
+                                                                    <img src="images/add-service/SBDCloudforPrupal.svg" alt="SBD Cloud for Prupal">
+                                                                </div>
+                                                                <p class="name fz-14 cl-333">SBD Cloud for Prupal</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <label class="item swiper-no-swiping">
+                                                            <input type="radio" name="product" id="0" value="SBD Cloud for Model">
+                                                            <div class="item-show text-center">
+                                                                <div class="img">
+                                                                    <img src="images/add-service/SBDCloudforWorkpress.svg" alt="SBD Cloud for Model">
+                                                                </div>
+                                                                <p class="name fz-14 cl-333">SBD Cloud for Model</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <label class="item swiper-no-swiping">
+                                                            <input type="radio" name="product" id="0" value="SBD Cloud for Database">
+                                                            <div class="item-show text-center">
+                                                                <div class="img">
+                                                                    <img src="images/add-service/SBDCloudforDatabase.svg" alt="SBD Cloud for Database">
+                                                                </div>
+                                                                <p class="name fz-14 cl-333">SBD Cloud for Database</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <label class="item swiper-no-swiping">
+                                                            <input type="radio" name="product" id="0" value="SBD Cloud for Prupal">
+                                                            <div class="item-show text-center">
+                                                                <div class="img">
+                                                                    <img src="images/add-service/SBDCloudforPrupal.svg" alt="SBD Cloud for Prupal">
+                                                                </div>
+                                                                <p class="name fz-14 cl-333">SBD Cloud for Prupal</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <label class="item swiper-no-swiping">
+                                                            <input type="radio" name="product" id="0" value="SBD Cloud for Model">
+                                                            <div class="item-show text-center">
+                                                                <div class="img">
+                                                                    <img src="images/add-service/SBDCloudforWorkpress.svg" alt="SBD Cloud for Model">
+                                                                </div>
+                                                                <p class="name fz-14 cl-333">SBD Cloud for Model</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
+                                        </div>
+                                        <div class="product-options" id="product_0">
+                                            <div class="list-packages">
+                                                <h4 class="title cl-666 fw-400 fz-16 m-bottom-15">Chọn gói</h4>
+                                                <div class="list horizontal-scrollbar d-flex align-center">
+                                                    <div class="item">
+                                                        <label class="label-checkbox" for="package_1">
+                                                            <span class="text">Cloud 02 GB<span class="link-tooltip" data-id="#tooltip_1"></span></span>
+                                                            <input class="" type="radio" name="package" id="package_1" value="Cloud 02 GB">
+                                                            <span class="check-status"></span>
+                                                            <div class="tool_tip-content" id="tooltip_1" style="display: none;">
+                                                                <ul>
+                                                                    <li>CPU: 01 vCORE</li>
+                                                                    <li>Băng thông trong nước: 100mBps</li>
+                                                                    <li>RAM: 02 GB</li>
+                                                                    <li>Băng thông quốc tế: 10 mBps</li>
+                                                                    <li>Dung lượng: 40 GB</li>
+                                                                    <li>Địa chỉ IP Publit: 1</li>
+                                                                </ul>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <label class="label-checkbox" for="package_2">
+                                                            <span class="text">Cloud 04 GB<span class="link-tooltip" data-id="#tooltip_2"></span></span>
+                                                            <input class="" type="radio" name="package" id="package_2" value="Cloud 04 GB">
+                                                            <span class="check-status"></span>
+                                                            <div class="tool_tip-content" id="tooltip_2" style="display: none;">
+                                                                <ul>
+                                                                    <li>CPU: 01 vCORE</li>
+                                                                    <li>Băng thông trong nước: 100mBps</li>
+                                                                    <li>RAM: 04 GB</li>
+                                                                    <li>Băng thông quốc tế: 10 mBps</li>
+                                                                    <li>Dung lượng: 40 GB</li>
+                                                                    <li>Địa chỉ IP Publit: 1</li>
+                                                                </ul>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <label class="label-checkbox" for="package_3">
+                                                            <span class="text">Cloud 08 GB<span class="link-tooltip" data-id="#tooltip_3"></span></span>
+                                                            <input class="" type="radio" name="package" id="package_3" value="Cloud 08 GB">
+                                                            <span class="check-status"></span>
+                                                            <div class="tool_tip-content" id="tooltip_3" style="display: none;">
+                                                                <ul>
+                                                                    <li>CPU: 01 vCORE</li>
+                                                                    <li>Băng thông trong nước: 100mBps</li>
+                                                                    <li>RAM: 08 GB</li>
+                                                                    <li>Băng thông quốc tế: 10 mBps</li>
+                                                                    <li>Dung lượng: 40 GB</li>
+                                                                    <li>Địa chỉ IP Publit: 1</li>
+                                                                </ul>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <label class="label-checkbox" for="package_4">
+                                                            <span class="text">Cloud 16 GB<span class="link-tooltip" data-id="#tooltip_4"></span></span>
+                                                            <input class="" type="radio" name="package" id="package_4" value="Cloud 16 GB">
+                                                            <span class="check-status"></span>
+                                                            <div class="tool_tip-content" id="tooltip_4" style="display: none;">
+                                                                <ul>
+                                                                    <li>CPU: 01 vCORE</li>
+                                                                    <li>Băng thông trong nước: 100mBps</li>
+                                                                    <li>RAM: 16 GB</li>
+                                                                    <li>Băng thông quốc tế: 10 mBps</li>
+                                                                    <li>Dung lượng: 40 GB</li>
+                                                                    <li>Địa chỉ IP Publit: 1</li>
+                                                                </ul>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-billing-time">
+                                                <h4 class="title cl-666 fw-400 fz-16 m-bottom-15">Chọn chu kỳ thanh toán</h4>
+                                                <div class="list horizontal-scrollbar d-flex align-center">
+                                                    <div class="item">
+                                                        <label class="label-checkbox" for="billing_time_1">
+                                                            <span class="text fw-500 fz-16 cl-333">4.500.000 vnđ/01 tháng</span>
+                                                            <input class="" type="radio" name="billing_time" id="billing_time_1" value="4.500.000 vnđ/01 tháng">
+                                                            <span class="check-status"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <label class="label-checkbox" for="billing_time_2">
+                                                            <span class="text fw-500 fz-16 cl-333">13.500.000 vnđ/03 tháng</span>
+                                                            <input class="" type="radio" name="billing_time" id="billing_time_2" value="13.500.000 vnđ/03 tháng">
+                                                            <span class="check-status"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <label class="label-checkbox" for="billing_time_3">
+                                                            <span class="text fw-500 fz-16 cl-333">27.000.000 vnđ/06 tháng</span>
+                                                            <input class="" type="radio" name="billing_time" id="billing_time_3" value="27.000.000 vnđ/06 tháng">
+                                                            <span class="check-status"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="item">
+                                                        <label class="label-checkbox" for="billing_time_4">
+                                                            <span class="text fw-500 fz-16 cl-333">27.000.000 vnđ/06 tháng</span>
+                                                            <input class="" type="radio" name="billing_time" id="billing_time_4" value="27.000.000 vnđ/06 tháng">
+                                                            <span class="check-status"></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-infos display-flex">
+                                                <div class="item-field col-md-6 first">
+                                                    <label for="host_name"><span class="text">Tên (Hostname)</span></label>
+                                                    <input type="text" name="host_name" id="host_name" placeholder="Nhập tên (Hostname) của bạn...">
+                                                </div>
+                                                <div class="item-field col-md-6 last">
+                                                    <label for="operating_system"><span class="text">Chọn Hệ điều hành</span></label>
+                                                    <select class="select2_operating_system-js" name="operating_system" id="operating_system">
+                                                        <option data-icon="" value="">Chọn hệ điều hành</option>
+                                                        <option data-icon="centos" value="Centos - 8.1 x86-64">Centos - 8.1 x86-64</option>
+                                                        <option data-icon="centos" value="Centos - 7.6 x86-64">Centos - 7.6 x86-64</option>
+                                                        <option data-icon="centos" value="Centos - 6.10 x86-64">Centos - 6.10 x86-64</option>
+                                                        <option data-icon="ubuntu" value="Ubuntu - 19.10 x86-64">Ubuntu - 19.10 x86-64</option>
+                                                        <option data-icon="ubuntu" value="Ubuntu - 18.04 x86-64">Ubuntu - 18.04 x86-64</option>
+                                                        <option data-icon="ubuntu" value="Ubuntu - 16.04 x86-64">Ubuntu - 16.04 x86-64</option>
+                                                        <!-- loop -->
+                                                        <option data-icon="centos" value="Centos - 8.1 x86-64">Centos - 8.1 x86-64</option>
+                                                        <option data-icon="centos" value="Centos - 7.6 x86-64">Centos - 7.6 x86-64</option>
+                                                        <option data-icon="centos" value="Centos - 6.10 x86-64">Centos - 6.10 x86-64</option>
+                                                        <option data-icon="ubuntu" value="Ubuntu - 19.10 x86-64">Ubuntu - 19.10 x86-64</option>
+                                                        <option data-icon="ubuntu" value="Ubuntu - 18.04 x86-64">Ubuntu - 18.04 x86-64</option>
+                                                        <option data-icon="ubuntu" value="Ubuntu - 16.04 x86-64">Ubuntu - 16.04 x86-64</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="list-infos display-flex">
+                                                <div class="item-field col-md-6 first">
+                                                    <label for="add_ip"><span class="text">Thêm IP</span></label>
+                                                    <select class="select2-js" name="add_ip" id="add_ip">
+                                                        <option value="">Không thêm IP</option>
+                                                        <option value="Thêm 01 IP - 100.000 vnđ/01tháng">Thêm 01 IP - 100.000 vnđ/01tháng</option>
+                                                        <option value="Thêm 02 IP - 100.000 vnđ/01tháng">Thêm 02 IP - 100.000 vnđ/01tháng</option>
+                                                        <option value="Thêm 03 IP - 100.000 vnđ/01tháng">Thêm 03 IP - 100.000 vnđ/01tháng</option>
+                                                        <option value="Thêm 04 IP - 100.000 vnđ/01tháng">Thêm 04 IP - 100.000 vnđ/01tháng</option>
+                                                        <option value="Thêm 05 IP - 100.000 vnđ/01tháng">Thêm 05 IP - 100.000 vnđ/01tháng</option>
+                                                    </select>
+                                                </div>
+                                                <div class="item-field col-md-6 last">
+                                                    <label for="add_capacity"><span class="text">Thêm dung lượng</span></label>
+                                                    <select class="select2-js" name="add_capacity" id="add_capacity">
+                                                        <option value="">Không thêm dung lượng</option>
+                                                        <option value="Thêm 200GB dung lượng lưu trữ - 120.000 vnđ/tháng">Thêm 200GB dung lượng lưu trữ - 120.000 vnđ/tháng</option>
+                                                        <option value="Thêm 300GB dung lượng lưu trữ - 120.000 vnđ/tháng">Thêm 300GB dung lượng lưu trữ - 120.000 vnđ/tháng</option>
+                                                        <option value="Thêm 400GB dung lượng lưu trữ - 120.000 vnđ/tháng">Thêm 400GB dung lượng lưu trữ - 120.000 vnđ/tháng</option>
+                                                        <option value="Thêm 500GB dung lượng lưu trữ - 120.000 vnđ/tháng">Thêm 500GB dung lượng lưu trữ - 120.000 vnđ/tháng</option>
+                                                        <option value="Thêm 600GB dung lượng lưu trữ - 120.000 vnđ/tháng">Thêm 600GB dung lượng lưu trữ - 120.000 vnđ/tháng</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="footer-form text-right">
+                                            <button type="submit" class="btn-submit">Thêm vào đơn hàng <span class="lnr lnr-arrow-right"></span></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="right">
+                                <form class="wrap-order-services" action="cart.html" method="post">
+                                    <h2 class="title fw-700 m-bottom-20 fz-18 cl-333">Đơn hàng</h2>
+                                    <div class="inner empty-cart">
+                                        <img src="images/add-service/empty.png" alt="empty.png">
+                                        <p class="cl-666 fz-20 fw-500 m-top-30 text-center">Đơn hàng của bạn đang trống.<br>Hãy chọn sản phẩm để cho vào giỏ hàng!</p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer-copyright cl-333 fz-13 fw-300">
+                    <p>Sao Bac Dau © 2021 All Rights Reserved. Thiết kế web bởi Cánh Cam</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="frontend/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="frontend/js/jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="frontend/js/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="frontend/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="frontend/js/select2.min.js"></script>
+    <script type="text/javascript" src="frontend/user/user.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+@media screen and (min-width: 1200px) {
+
+    .login,
+    .wrap-content {
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+
+    label#billing_time-error,
+    label#package-error {
+        top: 22px;
+    }
+
+    .list-infos .item-field {
+        padding: 0 10px;
+    }
+
+    .payment-details .body .item-bank {
+        width: calc(100% / 4);
+    }
+
+    header.header-login .back {
+        top: 20px;
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .fz-40 {
+        font-size: 28px;
+    }
+
+    .btn-submit{
+        font-size: 16px;
+    }
+
+    .m-bottom-20 {
+        margin-bottom: 15px;
+    }
+
+    .item-field+.item-field {
+        margin-top: 13px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}

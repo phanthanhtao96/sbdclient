@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBD Portal</title>
+    <meta property="og:title" content="SBD Portal">
+    <meta property="og:site_name" content="SBDPortal">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+    <link rel="icon" type="image/png" href="images/logo-color.svg">
+    <link rel="stylesheet" href="fonts/GoogleSans/stylesheet.css">
+    <link rel="stylesheet" href="fonts/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/Linearicons/style.css">
+    <link rel="stylesheet" href="frontend/css/bootstrap_customized.css">
+    <!-- <link rel="stylesheet" type="text/css" href="frontend/js/slick/slick.css"/> -->
+    <link rel="stylesheet" href="frontend/css/animate.css">
+    <link rel="stylesheet" href="frontend/css/global.css">
+    <link rel="stylesheet" href="frontend/user/user.css">
+    <link rel="stylesheet" href="frontend/login/login.css">
+    <link rel="stylesheet" href="frontend/css/responsive.css">
+</head>
+<body class="user-page" id="create-new-ticket">
+    <style>
+        @keyframes fadeout {
+            0% { opacity: 1; }
+            50% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        @-webkit-keyframes fadeout {
+            0% { opacity: 1; }
+            50% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        @-moz-keyframes fadeout {
+            0% { opacity: 1; }
+            50% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+    <div id="hide_me" style="opacity: 0;background-color: #fff; position: absolute; width: 100%; height: 100%;z-index: 9999; pointer-events: none;top: 0;left: 0;-webkit-animation: fadeout .5s ease-in alternate; -moz-animation: fadeout .5s ease-in alternate; animation:fadeout .5s ease-in alternate;"></div>
+    <header class="header-admin">
+        <div class="inner d-flex align-center">
+            <div class="logo">
+                <img src="images/logo-color.svg" alt="SBD Portal">
+            </div>
+            <nav class="nav-dashboard">
+                <ul class="list-unstyled d-flex align-center">
+                    <li><a href="dashboard.html" title="Dashboard"><img src="images/header/Home.svg" alt="Dashboard"></a></li>
+                    <li><a href="#" title="Dashboard"><img src="images/header/Buy.svg" alt="Dashboard"></a></li>
+                    <li><a href="#" title="Dashboard"><img src="images/header/Unlocked.svg" alt="Dashboard"></a></li>
+                </ul>
+            </nav>
+            <nav class="nav-user">
+                <ul class="list-unstyled d-flex align-center">
+                    <li><a class="noti" href="dashboard.html" title="Notification"><img src="images/header/Notification.svg" alt="Notification"><span class="alert"></span></a></li>
+                    <li><a class="chat" href="#" title="Chat"><img src="images/header/Chat_1.svg" alt="Chat"><span class="alert"></span></a></li>
+                    <li class="menu-has-chilren">
+                        <a class="user-menu" href="javascript:void(0)" title="Profile"><img src="images/header/Profile.svg" alt="Profile"><span class="arrow-down"></span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="login.html" title="Đăng nhập">Đăng nhập</a>
+                            </li>
+                            <li>
+                                <a href="register.html" title="Đăng ký">Đăng ký</a>
+                            </li>
+                            <li>
+                                <a href="change-password.html" title="Đổi mật khẩu">Đổi mật khẩu</a>
+                            </li>
+                            <li>
+                                <a href="update-user.html" title="Cập nhật tài khoản">Cập nhật tài khoản</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu d-xl-none">
+                <button class="menu-toggle">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="menu-mobile-left">
+        <div class="mobile-menu d-xl-none">
+            <button class="menu-toggle">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="top">
+            <div class="coin cl-white">
+                <div class="icon">
+                    <img src="images/menu-left/coin.svg" alt="coin">
+                </div>
+                <div class="my-coin fw-900"><p>0 VNĐ</p></div>
+                <a class="charge-coin" href="#" title="Charge your coin"></a>
+            </div>
+        </div>
+        <nav class="nav-left">
+            <ul class="list-unstyled">
+                <li class="menu-item current-menu-item">
+                    <a href="dashboard.html" title="Tổng quan">
+                        <img src="images/menu-left/2.svg" alt="Tổng quan">
+                        <span class="text">Tổng quan</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="service.html" title="Dịch vụ">
+                        <img src="images/menu-left/3.svg" alt="Dịch vụ">
+                        <span class="text">Dịch vụ</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="add-service.html" title="Đăng ký dịch vụ">
+                        <img src="images/menu-left/4.svg" alt="Đăng ký dịch vụ">
+                        <span class="text">Đăng ký dịch vụ</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="order.html" title="Đơn hàng">
+                        <img src="images/menu-left/6.svg" alt="Đơn hàng">
+                        <span class="text">Đơn hàng</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="bill.html" title="Hóa đơn">
+                        <img src="images/menu-left/5.svg" alt="Hóa đơn">
+                        <span class="text">Hóa đơn</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="payment.html" title="Thanh toán">
+                        <img src="images/menu-left/7.svg" alt="Thanh toán">
+                        <span class="text">Thanh toán</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="support-ticket.html" title="Ticket hỗ trợ">
+                        <img src="images/menu-left/8.svg" alt="Ticket hỗ trợ">
+                        <span class="text">Ticket hỗ trợ</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="mailbox.html" title="Hộp thư">
+                        <img src="images/menu-left/9.svg" alt="Hộp thư">
+                        <span class="text">Hộp thư</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-content">
+        <div class="wrap-content display-flex">
+            <div class="menu-left desktop">
+                <div class="mobile-menu d-xl-none">
+                    <button class="menu-toggle">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="top">
+                    <div class="coin cl-white">
+                        <div class="icon">
+                            <img src="images/menu-left/coin.svg" alt="coin">
+                        </div>
+                        <div class="my-coin fw-900"><p>0 VNĐ</p></div>
+                        <a class="charge-coin" href="#" title="Charge your coin"></a>
+                    </div>
+                </div>
+                <nav class="nav-left">
+                    <ul class="list-unstyled">
+                        <li class="menu-item current-menu-item">
+                            <a href="dashboard.html" title="Tổng quan">
+                                <img src="images/menu-left/2.svg" alt="Tổng quan">
+                                <span class="text">Tổng quan</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="service.html" title="Dịch vụ">
+                                <img src="images/menu-left/3.svg" alt="Dịch vụ">
+                                <span class="text">Dịch vụ</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="add-service.html" title="Đăng ký dịch vụ">
+                                <img src="images/menu-left/4.svg" alt="Đăng ký dịch vụ">
+                                <span class="text">Đăng ký dịch vụ</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="order.html" title="Đơn hàng">
+                                <img src="images/menu-left/6.svg" alt="Đơn hàng">
+                                <span class="text">Đơn hàng</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="bill.html" title="Hóa đơn">
+                                <img src="images/menu-left/5.svg" alt="Hóa đơn">
+                                <span class="text">Hóa đơn</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="payment.html" title="Thanh toán">
+                                <img src="images/menu-left/7.svg" alt="Thanh toán">
+                                <span class="text">Thanh toán</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="support-ticket.html" title="Ticket hỗ trợ">
+                                <img src="images/menu-left/8.svg" alt="Ticket hỗ trợ">
+                                <span class="text">Ticket hỗ trợ</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="mailbox.html" title="Hộp thư">
+                                <img src="images/menu-left/9.svg" alt="Hộp thư">
+                                <span class="text">Hộp thư</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content-right">
+                <div class="inner">
+                    <div class="wrap-change-password wrap-new-ticket">
+                        <h1 class="title fz-32 fw-700 cl-333 m-bottom-30">Form tạo ticket</h1>
+                        <div class="row align-center">
+                            <div class="col-md-7">
+                                <form class="form-new-ticket cl-666" id="new-ticket_form" action="" method="post">
+                                    <div class="item-field">
+                                        <label for="name"><span class="text">Họ và tên</span></label>
+                                        <input type="text" name="name" id="name" placeholder="Nhập họ và tên">
+                                    </div>
+                                    <div class="item-field">
+                                        <label for="email"><span class="text">Email</span></label>
+                                        <input type="text" name="email" id="email" placeholder="Nhập email của bạn">
+                                    </div>
+                                    <div class="item-field">
+                                        <label for="phone"><span class="text">Số điện thoại</span></label>
+                                        <input type="tel" name="phone" id="phone" placeholder="Nhập số điện thoại">
+                                    </div>
+                                    <div class="item-field">
+                                        <label for="message"><span class="text">Thông tin cần hỗ trợ</span></label>
+                                        <textarea name="message" id="message" rows="3" placeholder="Nhập thông tin cần hỗ trợ"></textarea>
+                                    </div>
+                                    <div class="item-field item-field-submit m-top-30">
+                                        <input class="btn-submit" type="submit" value="Gửi ticket">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="img m-top-15">
+                                    <img src="images/new_ticket/ticket-form.png" alt="Tạo ticket">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer-copyright cl-333 fz-13 fw-300">
+                    <p>Sao Bac Dau © 2021 All Rights Reserved. Thiết kế web bởi Cánh Cam</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="frontend/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="frontend/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="frontend/login/login.js"></script>
+</body>
+</html>

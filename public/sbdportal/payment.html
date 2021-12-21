@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBD Portal</title>
+    <meta property="og:title" content="SBD Portal">
+    <meta property="og:site_name" content="SBDPortal">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+    <link rel="icon" type="image/png" href="images/logo-color.svg">
+    <link rel="stylesheet" href="fonts/GoogleSans/stylesheet.css">
+    <link rel="stylesheet" href="fonts/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/Linearicons/style.css">
+    <link rel="stylesheet" href="frontend/css/bootstrap_customized.css">
+    <link rel="stylesheet" href="frontend/css/select2.min.css">
+    <link rel="stylesheet" href="frontend/css/animate.css">
+    <link rel="stylesheet" href="frontend/css/global.css">
+    <link rel="stylesheet" href="frontend/user/user.css">
+    <link rel="stylesheet" href="frontend/css/responsive.css">
+</head>
+
+<body class="user-page" id="cart">
+    <style>
+        @keyframes fadeout {
+            0% { opacity: 1; }
+            50% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        @-webkit-keyframes fadeout {
+            0% { opacity: 1; }
+            50% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        @-moz-keyframes fadeout {
+            0% { opacity: 1; }
+            50% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+    <div id="hide_me" style="opacity: 0;background-color: #fff; position: absolute; width: 100%; height: 100%;z-index: 9999; pointer-events: none;top: 0;left: 0;-webkit-animation: fadeout .5s ease-in alternate; -moz-animation: fadeout .5s ease-in alternate; animation:fadeout .5s ease-in alternate;"></div>
+    <header class="header-admin">
+        <div class="inner d-flex align-center">
+            <div class="logo">
+                <img src="images/logo-color.svg" alt="SBD Portal">
+            </div>
+            <nav class="nav-dashboard">
+                <ul class="list-unstyled d-flex align-center">
+                    <li><a href="dashboard.html" title="Dashboard"><img src="images/header/Home.svg"
+                                alt="Dashboard"></a></li>
+                    <li><a href="#" title="Dashboard"><img src="images/header/Buy.svg" alt="Dashboard"></a></li>
+                    <li><a href="#" title="Dashboard"><img src="images/header/Unlocked.svg" alt="Dashboard"></a></li>
+                </ul>
+            </nav>
+            <nav class="nav-user">
+                <ul class="list-unstyled d-flex align-center">
+                    <li><a class="noti" href="dashboard.html" title="Notification"><img src="images/header/Notification.svg" alt="Notification"><span class="alert"></span></a></li>
+                    <li><a class="chat" href="#" title="Chat"><img src="images/header/Chat_1.svg" alt="Chat"><span class="alert"></span></a></li>
+                    <li class="menu-has-chilren">
+                        <a class="user-menu" href="javascript:void(0)" title="Profile"><img src="images/header/Profile.svg" alt="Profile"><span class="arrow-down"></span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="login.html" title="Đăng nhập">Đăng nhập</a>
+                            </li>
+                            <li>
+                                <a href="register.html" title="Đăng ký">Đăng ký</a>
+                            </li>
+                            <li>
+                                <a href="change-password.html" title="Đổi mật khẩu">Đổi mật khẩu</a>
+                            </li>
+                            <li>
+                                <a href="update-user.html" title="Cập nhật tài khoản">Cập nhật tài khoản</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu d-xl-none">
+                <button class="menu-toggle">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="menu-mobile-left">
+        <div class="mobile-menu d-xl-none">
+            <button class="menu-toggle">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="top">
+            <div class="coin cl-white">
+                <div class="icon">
+                    <img src="images/menu-left/coin.svg" alt="coin">
+                </div>
+                <div class="my-coin fw-900"><p>0 VNĐ</p></div>
+                <a class="charge-coin" href="#" title="Charge your coin"></a>
+            </div>
+        </div>
+        <nav class="nav-left">
+            <ul class="list-unstyled">
+                <li class="menu-item current-menu-item">
+                    <a href="dashboard.html" title="Tổng quan">
+                        <img src="images/menu-left/2.svg" alt="Tổng quan">
+                        <span class="text">Tổng quan</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="service.html" title="Dịch vụ">
+                        <img src="images/menu-left/3.svg" alt="Dịch vụ">
+                        <span class="text">Dịch vụ</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="add-service.html" title="Đăng ký dịch vụ">
+                        <img src="images/menu-left/4.svg" alt="Đăng ký dịch vụ">
+                        <span class="text">Đăng ký dịch vụ</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="order.html" title="Đơn hàng">
+                        <img src="images/menu-left/6.svg" alt="Đơn hàng">
+                        <span class="text">Đơn hàng</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="bill.html" title="Hóa đơn">
+                        <img src="images/menu-left/5.svg" alt="Hóa đơn">
+                        <span class="text">Hóa đơn</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="payment.html" title="Thanh toán">
+                        <img src="images/menu-left/7.svg" alt="Thanh toán">
+                        <span class="text">Thanh toán</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="support-ticket.html" title="Ticket hỗ trợ">
+                        <img src="images/menu-left/8.svg" alt="Ticket hỗ trợ">
+                        <span class="text">Ticket hỗ trợ</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="mailbox.html" title="Hộp thư">
+                        <img src="images/menu-left/9.svg" alt="Hộp thư">
+                        <span class="text">Hộp thư</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-content">
+        <div class="wrap-content display-flex">
+            <div class="menu-left desktop">
+                <div class="mobile-menu d-xl-none">
+                    <button class="menu-toggle">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="top">
+                    <div class="coin cl-white">
+                        <div class="icon">
+                            <img src="images/menu-left/coin.svg" alt="coin">
+                        </div>
+                        <div class="my-coin fw-900">
+                            <p>0 VNĐ</p>
+                        </div>
+                        <a class="charge-coin" href="#" title="Charge your coin"></a>
+                    </div>
+                </div>
+                <nav class="nav-left">
+                    <ul class="list-unstyled">
+                        <li class="menu-item current-menu-item">
+                            <a href="dashboard.html" title="Tổng quan">
+                                <img src="images/menu-left/2.svg" alt="Tổng quan">
+                                <span class="text">Tổng quan</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="service.html" title="Dịch vụ">
+                                <img src="images/menu-left/3.svg" alt="Dịch vụ">
+                                <span class="text">Dịch vụ</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="add-service.html" title="Đăng ký dịch vụ">
+                                <img src="images/menu-left/4.svg" alt="Đăng ký dịch vụ">
+                                <span class="text">Đăng ký dịch vụ</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="order.html" title="Đơn hàng">
+                                <img src="images/menu-left/6.svg" alt="Đơn hàng">
+                                <span class="text">Đơn hàng</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="bill.html" title="Hóa đơn">
+                                <img src="images/menu-left/5.svg" alt="Hóa đơn">
+                                <span class="text">Hóa đơn</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="payment.html" title="Thanh toán">
+                                <img src="images/menu-left/7.svg" alt="Thanh toán">
+                                <span class="text">Thanh toán</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="support-ticket.html" title="Ticket hỗ trợ">
+                                <img src="images/menu-left/8.svg" alt="Ticket hỗ trợ">
+                                <span class="text">Ticket hỗ trợ</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="mailbox.html" title="Hộp thư">
+                                <img src="images/menu-left/9.svg" alt="Hộp thư">
+                                <span class="text">Hộp thư</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content-right">
+                <div class="inner">
+                    <div class="wrap-checkout">
+                        <div class="wrap-steps-checkout">
+                            <ul class="list-unstyled display-flex align-center m-bottom-0">
+                                <li class="step-active"><a href="add-service.html">Chọn sản phẩm</a></li>
+                                <li class="step-active"><a href="cart.html">Giỏ hàng</a></li>
+                                <li class="step-active"><a href="payment.html">Thanh toán</a></li>
+                                <li class=""><a href="complete.html">Hoàn tất</a></li>
+                            </ul>
+                        </div>
+                        <div class="wrap-add-service m-top-40 display-flex">
+                            <div class="wrap-payment">
+                                <h2 class="title cl-333 fz-18 fw-700 m-bottom-20">Phương thức thanh toán</h2>
+                                <div class="wrap-payment-inner display-flex">
+                                    <div class="left">
+                                        <form action="#" method="post" class="payment_form" id="payment_form">
+                                            <div class="inner">
+                                                <div class="payment-methods">
+                                                    <div class="item-method">
+                                                        <label class="label-checkbox" for="payment_method_1">
+                                                            <div class="box d-flex align-center">
+                                                                <div class="img">
+                                                                    <img src="images/payment/thanh-toan-the.png" alt="thanh-toan-the">
+                                                                </div>
+                                                                <div class="content cl-666 fz-16">
+                                                                    <h4 class="title fz-20 cl-333 fw-700 m-bottom-10">Chuyển khoản</h4>
+                                                                    <p>Chủ tài khoản: Công ty cổ phần dịch vụ viên thông Sao Bắc Đẩu</p>
+                                                                    <p>Tài khoản ngân hàng: <span style="color: #007db6">12345678</span></p>
+                                                                    <p>Ngân hàng Viecombank: Chi nhánh Mễ Trì</p>
+                                                                </div>
+                                                            </div>
+                                                            <input class="" type="radio" name="payment_method" id="payment_method_1" value="Bank transfer" checked>
+                                                            <span class="check-status"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="item-method m-top-20">
+                                                        <label class="label-checkbox" for="payment_method_2">
+                                                            <div class="box d-flex align-center">
+                                                                <div class="img">
+                                                                    <img src="images/payment/vn-pay.png" alt="thanh-toan-vnpay">
+                                                                </div>
+                                                                <div class="content cl-666 fz-16">
+                                                                    <h4 class="title fz-20 cl-333 fw-400 m-bottom-10"><span class="fw-700 ">Thanh toán qua VNPAY</span> (Qrcode, ví VNPAY, Credit Card)</p>
+                                                                </div>
+                                                            </div>
+                                                            <input class="" type="radio" name="payment_method" id="payment_method_2" value="VNPAY transfer">
+                                                            <span class="check-status"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="vnpay-method m-top-40">
+                                                        <h2 class="title fz-20 cl-333 fw-700 m-bottom-15">Thanh toán quét mã qua VNPay</h2>
+                                                        <img src="images/payment/vnpay.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="payment-details">
+                                                    <div class="item payment-details-bank">
+                                                        <div class="head">
+                                                            <h2 class="title fz-20 cl-333 fw-700 m-bottom-0">Thẻ ATM hoặc tài khoản ngân hàng</h2>
+                                                        </div>
+                                                        <div class="body">
+                                                            <div class="inner-body display-flex">
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-35.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-37.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-38.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-39.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-40.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-41.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-42.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-43.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-44.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-45.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-46.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-47.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-49.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-50.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-51.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-52.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-53.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-54.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-55.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/bank/Layer-56.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item payment-details-global">
+                                                        <div class="head">
+                                                            <h2 class="title fz-20 cl-333 fw-700 m-bottom-0">Thẻ thanh toán quốc tế</h2>
+                                                        </div>
+                                                        <div class="body">
+                                                            <div class="inner-body display-flex">
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/global/american-express.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/global/Visa-Classic.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/global/Mastercard.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/global/JCB.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="item-bank">
+                                                                    <div class="bank-img">
+                                                                        <img src="images/payment/global/UnionPay.png" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item payment-details-vnpay">
+                                                        <h2 class="title fz-20 cl-333 fw-700 m-bottom-15">Ví điện tử VNPAY</h2>
+                                                        <div class="body">
+                                                            <div class="item-bank">
+                                                                <div class="bank-img">
+                                                                    <img src="images/payment/vn-pay-logo.png" alt="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="inner m-top-30">
+                                                <div class="red-bill">
+                                                    <label class="label-checkbox m-bottom-25" for="red_bill">
+                                                        <h2 class="title cl-333 fz-18 fw-700 m-bottom-0">Xuất hóa đơn đỏ</h2>
+                                                        <input class="" type="checkbox" name="red_bill" id="red_bill">
+                                                        <span class="check-status"></span>
+                                                    </label>
+                                                    <div class="item-field">
+                                                        <label for="company_name"><span class="text">Tên công ty</span></label>
+                                                        <input type="text" name="company_name" id="company_name" placeholder="Nhập tên công ty của bạn">
+                                                    </div>
+                                                    <div class="item-field m-top-20">
+                                                        <label for="tax_code"><span class="text">Mã số thuế</span></label>
+                                                        <input type="text" name="tax_code" id="tax_code" placeholder="Nhập mã số thuế của bạn">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wrap-links d-flex m-top-40">
+                                                <div class="link white">
+                                                    <a href="cart.html"><span class="lnr lnr-arrow-left"></span> Quay lại</a>
+                                                </div>
+                                                <button type="submit" class="btn-submit">Thêm vào đơn hàng <span class="lnr lnr-arrow-right"></span></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="right">
+                                        <div class="table-total">
+                                            <div class="head d-flex align-center">
+                                                <div class="icon"><img src="images/button/buy.svg" alt=""></div>
+                                                <h2 class="title m-bottom-0 fz-18 cl-666 fw-400">Đơn hàng</h2>
+                                            </div>
+                                            <div class="body body-order-services">
+                                                <div class="item sub d-flex m-bottom-10">
+                                                    <p class="label fz-16 cl-666 m-bottom-0">Cloud 02 Gb - 01 Tháng</p>
+                                                    <p class="text fz-20 fw-700 cl-333">1.400.000VNĐ</p>
+                                                </div>
+                                                <div class="item vat d-flex m-bottom-0">
+                                                    <p class="label fz-16 cl-666 m-bottom-0">Cloud 02 Gb - 06 Tháng</p>
+                                                    <p class="text fz-20 fw-700 cl-333">5.196.000VNĐ</p>
+                                                </div>
+                                            </div>
+                                            <div class="body">
+                                                <div class="item sub d-flex m-bottom-10">
+                                                    <p class="label fz-18 cl-666 m-bottom-0">Cộng</p>
+                                                    <p class="text fz-20 fw-700 cl-333">1.400.000VNĐ</p>
+                                                </div>
+                                                <div class="item vat d-flex m-bottom-10">
+                                                    <p class="label fz-18 cl-666 m-bottom-0">Thuế (VAT)</p>
+                                                    <p class="text fz-20 fw-700 cl-333">519.000 VNĐ</p>
+                                                </div>
+                                                <div class="item sale d-flex">
+                                                    <p class="label fz-18 cl-666 m-bottom-0">Giảm giá</p>
+                                                    <p class="text fz-20 fw-700 cl-333">0 VNĐ</p>
+                                                </div>
+                                            </div>
+                                            <div class="footer">
+                                                <div class="total d-flex">
+                                                    <p class="label fz-18 cl-666 m-bottom-0">Tổng</p>
+                                                    <p class="text fz-20 fw-700 cl-main">7.115.6000 VNĐ</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer-copyright cl-333 fz-13 fw-300">
+                    <p>Sao Bac Dau © 2021 All Rights Reserved. Thiết kế web bởi Cánh Cam</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="frontend/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="frontend/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="frontend/js/select2.min.js"></script>
+    <script type="text/javascript" src="frontend/user/user.js"></script>
+</body>
+
+</html>
